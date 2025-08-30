@@ -1,100 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta hhtp-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>El Cordon y La Rosa - Princiapl</title>
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/flexbox.css">
-    <link rel="stylesheet" href="/css/grid.css">
-    <link rel="stylesheet" href="/css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Restaurante Sazón Iqueña</title>
+    <!-- Archivos CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/flexbox.css">
+    <link rel="stylesheet" href="css/grid.css">
+    <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
-    <!-- Header con Menú de Navegación -->
-    <header id="presentation">
-        <nav class="nav-menu">
-            <div class="logo">
-                <h1>El Cordón y la Rosa</h1>
-            </div>
-            <ul class="nav-links">
-                <li><a href="#presentation">Presentación</a></li>
-                <li><a href="#propuesta">Nuestra Propuesta</a></li>
-                <li><a href="#locales">Nuestros Locales</a></li>
-                <li><a href="#la-carta">La Carta</a></li>
-                <li><a href="#equipo">Nuestro Equipo</a></li>
-                <li><a href="https://" target="_blank">Reservar</a></li>
+
+    <!-- HEADER -->
+    <header class="header container">
+        <div class="navbar">
+            <div class="logo"><a href="#">El Cordon y La Rosa</a></div>
+            <ul class="links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#carta">Carta</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#contacto">Contacto</a></li>
             </ul>
-            <div class="hamburger" onclick="toggleMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
+            <a href="#" class="action_btn">Reservar</a>
+            <div class="toggle_btn">
+                <i class="fa-solid fa-bars"></i>
             </div>
-        </nav>
+        </div>
+
+        <div class="dropdown_menu">
+            <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#carta">Carta</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#" class="action_btn">Reservar</a></li>
+        </div>
+
     </header>
+    <main>
+        <section id="hero">
+            <h1>El Cordon y La Rosa</h1>
+            <p> Tradición Iqueña en Cada Bocado</p>
+        </section>
+    </main>
 
-    <!-- Sección Hero / Presentación -->
-    <section id="presentation" class="hero-section">
-        <div class="hero-content">
-            <h2>El Cordón y la Rosa | Restaurante de Comida Criolla y Tradición Iqueña</h2>
-            <p>Descubre la auténtica cocina criolla en un ambiente acogedor.</p>
-        </div>
-        <!-- Carousel o Galería de Imágenes -->
-        <div class="carousel">
-            <img src="https://via.placeholder.com/1200x600?text=Interior+del+Restaurante" alt="Interior de El Cordón y la Rosa con decoración acogedora y mesas listas para disfrutar." class="carousel-image active">
-            <img src="https://via.placeholder.com/1200x600?text=Picarones+Peruanos" alt="Picarones peruanos servidos en El Cordón y la Rosa, acompañados de miel de chancaca, un postre criollo tradicional." class="carousel-image">
-            <img src="https://via.placeholder.com/1200x600?text=Decoración+Tradicional" alt="Decoración acogedora y tradicional de El Cordón y la Rosa, celebrando la cultura limeña y la comida criolla." class="carousel-image">
-        </div>
-    </section>
+    <script>
+        const toggleBtn=document.querySelector('.toggle_btn');
+        const toggleBtnIcon=document.querySelector('.toggle_btn i');
+        const dropDowMenu=document.querySelector('.dropdown_menu');
 
-    <!-- Sección Nuestra Propuesta -->
-    <section id="propuesta" class="propuesta-section">
-        <h2>Nuestra Propuesta</h2>
-        <p>El Cordón y la Rosa es un espacio familiar que celebra la cocina tradicional limeña, evocando la generosidad de la abuela y la alegría de la amistad. Honramos la tradición con platos adaptables y llenos de sabor.</p>
-    </section>
+        toggleBtn.onclick=function(){
+            dropDowMenu.classList.toggle('open');
+            const isOpen=dropDowMenu.classList.contains('open');
 
-    <!-- Sección Nuestros Locales -->
-    <section id="locales" class="locales-section">
-        <h2>Nuestros Locales</h2>
-        <p>Abrimos en Miraflores en 2009, seguido de Chacarilla y Chile, creando un ambiente hogareño que honra la tradición limeña.</p>
-        <ul class="locations-list">
-            <li>Miraflores - Dirección: Av. La Mar 1234, Lima</li>
-            <li>Chacarilla - Dirección: Calle Ejemplo 567, Santiago de Surco</li>
-            <li>Chile - Dirección: Calle Ficticia 890, Santiago</li>
-        </ul>
-    </section>
-
-    <!-- Sección La Carta -->
-    <section id="la-carta" class="carta-section">
-        <h2>La Carta</h2>
-        <p>Nuestra cocina rinde homenaje a la tradición limeña, con bases secretas, salsas y aderezos únicos. Descubre el "mercado de El Cordón y la Rosa" con productos artesanales disponibles en nuestros restaurantes o en línea.</p>
-        <!-- Aquí se puede enlazar o incluir un submenú para detalles del menú -->
-        <a href="menu.html" class="cta-button">Ver Menú Completo</a>
-    </section>
-
-    <!-- Sección Nuestro Equipo -->
-    <section id="equipo" class="equipo-section">
-        <h2>Nuestro Equipo</h2>
-        <ul class="team-list">
-            <li>Gerente de Marca: Juan Pérez</li>
-            <li>Administrador Miraflores: María López</li>
-            <li>Administrador Chacarilla: Carlos García</li>
-            <li>Jefe de Cocina: Ana Rodríguez</li>
-        </ul>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <p>&copy; 2025 El Cordón y la Rosa. Todos los derechos reservados.</p>
-        <ul class="related-sites">
-            <li><a href="https://www.barrachalaca.pe/" target="_blank">Barracha Lacal</a></li>
-            <li><a href="https://www.elbodegon.com.pe/" target="_blank">El Bodegón</a></li>
-            <li><a href="https://papachos.com" target="_blank">Papachos</a></li>
-            <li><a href="https://www.lamarcebicheria.com/" target="_blank">La Mar Cebichería</a></li>
-            <li><a href="https://tantaperu.com/" target="_blank">Tanta Perú</a></li>
-            <li><a href="https://chicha.com.pe/" target="_blank">Chicha</a></li>
-        </ul>
-        <p><a href="https://pedidos.elcordony larosa.pe/pedir" target="_blank">Pedir en Línea</a></p>
-    </footer>
+            toggleBtnIcon.classList=isOpen
+            ?'fa-solid fa-xmark'
+            :'fa-solid fa-bars';
+        }
+    </script>
 
 </body>
 </html>
