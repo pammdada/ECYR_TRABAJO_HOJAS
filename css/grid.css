@@ -1,0 +1,29 @@
+/* Grid layout for main structure */
+.main-container {
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "main main"
+        "footer footer";
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 1fr;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    grid-area: header;
+}
+
+main {
+    grid-area: main;
+    padding: 2rem;
+}
+
+footer {
+    grid-area: footer;
+}
+
+.propuesta-section, .locales-section, .carta-section, .equipo-section {
+    margin-bottom: 3rem;
+}
