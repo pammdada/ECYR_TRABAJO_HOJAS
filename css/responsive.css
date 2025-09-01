@@ -29,3 +29,24 @@
         display: block;
     }
 }
+/* Footer */
+@media (max-width: 768px) {
+  .footer .container {
+    text-align: center;
+  }
+  .footer-section.socials .social-icons {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 576px) {
+    .footer .container {
+    grid-template-columns: 1fr; 
+    gap: 1.5rem;
+  }
+
+  .footer-section {
+    max-width: 350px;
+    margin: 0 auto;
+  }
+}

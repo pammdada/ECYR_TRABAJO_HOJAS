@@ -29,7 +29,6 @@ a:hover{
     background-color: transparent;
     color: #fff;
     border-radius: 0;
-
 }
 
 header{
@@ -121,4 +120,133 @@ header{
     width: 100%;
     display: flex;
     justify-content: center;
+}
+
+/* NUESTRA PROPUESTA*/
+.propuesta-section {
+    margin: 0 auto;
+    background-color: #f5efe5;
+    text-align: center;
+    padding: 3rem 2rem;
+    font-family: 'Georgia', serif;
+    color: #4b2e2e;
+}
+
+.propuesta-section h2 {
+    font-weight: 700;
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+}
+
+.propuesta-divider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+    color: #a65f4e;
+    font-weight: 900;
+}
+
+.propuesta-divider span {
+    font-size: 1.1rem;
+    margin: 0 12px;
+    position: relative;
+}
+
+.propuesta-divider span::before,
+.propuesta-divider span::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid #a65f4e;
+    margin: 0 0.4rem;
+    top: 50%;
+    position: relative;
+}
+
+.propuesta-section p {
+    font-weight: 400;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    line-height: 1.5em;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/*FOOTER*/
+.footer {
+  background: orange ;
+  color: white;
+  font-family: 'Georgia', serif;
+  padding-top: 2rem;
+}
+
+.footer .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto 1.5rem;
+  padding: 0 1rem;
+  justify-items: center;
+  align-items: start;
+  text-align: center;
+}
+
+.footer-section h3,
+.footer-section h4 {
+  margin-bottom: 1rem;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.footer-section p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+/* Enlaces */
+.footer-section.links ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.footer-section.links ul li {
+  margin-bottom: 0.6rem;
+}
+
+.footer-section.links ul li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.footer-section.links ul li a:hover {
+  color: #ffe5d0;
+  transform: translateX(5px);
+}
+
+/* Redes sociales */
+
+.footer-section.socials .social-icons {
+  display: flex;
+  gap: 1rem;
+  
+}
+.footer-section.socials a {
+  font-size: 1.3rem;
+  color: white;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.footer-section.socials a:hover {
+  color: #ffe5d0;
+  transform: scale(1.2);
+}
+
+/* Parte inferior */
+.footer-bottom {
+  padding: 1rem 0;
+  background-color: #421f17;
+  text-align: center;
+  font-size: 0.85rem;
 }
